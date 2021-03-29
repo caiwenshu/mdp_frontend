@@ -3,7 +3,7 @@
 	  	<transition name="form-fade" mode="in-out">
 	  		<section class="form_contianer" v-show="showLogin">
 		  		<div class="manage_tip">
-		  			<p>MMP</p>
+		  			<p>Yeego MDP</p>
 		  		</div>
 		    	<el-form :model="loginForm" :rules="rules" ref="loginForm" >
 					<el-form-item prop="username">
@@ -16,7 +16,7 @@
 				    	<el-button type="primary" @click="submitForm('loginForm')" class="submit_btn">登陆</el-button>
 				  	</el-form-item>
 				</el-form>
-				<p class="tip">Mobile Management Platform(admin)</p>
+				<p class="tip">Mobile Distribution Platform(admin)</p>
 	  		</section>
 	  	</transition>
   	</div>

@@ -17,7 +17,7 @@ const ProductEmailList = r => require.ensure([], () => r(require('@/page/project
 
 const upload = r => require.ensure([], () => r(require('@/page/upload')),'upload');
 
-const settings = r => require.ensure([], () => r(require('@/page/settings/Settings')),'settings');
+// const settings = r => require.ensure([], () => r(require('@/page/settings/Settings')),'settings');
 
 // meta子路由如果想要 可以跳转 则配置meta
 const routes = [
@@ -43,7 +43,7 @@ const routes = [
 
                     { path: '/alps/upload', component: upload, name: '文件上传', meta: {hidden:false,menuShow: true, menuName: '文件上传'}}
                 ]},
-            {path: '/settings', component: settings, name: 'Settings', meta:{menuShow: true, menuName: 'Settings'}},
+            // {path: '/settings', component: settings, name: 'Settings', meta:{menuShow: true, menuName: 'Settings'}},
 
             // {path: '/quality', component: RiftValleyMain, name: 'RiftValley', meta:{menuShow: true, menuName: 'RiftValley'}},
             ]

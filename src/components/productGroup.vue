@@ -178,19 +178,16 @@
 
             handleDownloadSelect(data, item) {
 
-                if (data == null) {
-                    this.$message({
-                        showClose: true,
-                        message: '不存在数据',
-                        type: 'error'
-                    });
-                    return;
-                }
+                // if (data == null) {
+                //     this.$message({
+                //         showClose: true,
+                //         message: '不存在数据',
+                //         type: 'error'
+                //     });
+                //     return;
+                // }
 
                 this.$emit('handleSelectFn',{
-                    application_id:data.application_id,
-                    time:data.time,
-                    version:data.version,
                     group_name:item.group_name,
                     group_type:item.group_type,
                     type:"Download"
@@ -199,19 +196,16 @@
 
             handleEmailSelect(data, item) {
 
-                if (data == null) {
-                    this.$message({
-                        showClose: true,
-                        message: '不存在数据',
-                        type: 'error'
-                    });
-                    return;
-                }
+                // if (data == null) {
+                //     this.$message({
+                //         showClose: true,
+                //         message: '不存在数据',
+                //         type: 'error'
+                //     });
+                //     return;
+                // }
 
                 this.$emit('handleSelectFn',{
-                    application_id:data.application_id,
-                    time:data.time,
-                    version:data.version,
                     group_name:item.group_name,
                     group_type:item.group_type,
                     type:"Email"

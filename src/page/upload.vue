@@ -7,6 +7,7 @@
                     drag
                     :headers="token"
                     action="/alps/upload"
+                    :data="uploadData"
                     :on-success="successFn"
                     :on-error="errorFn"
                     :on-progress="progressFn"
@@ -27,6 +28,9 @@
         data() {
             return {
                 token: {},
+                uploadData:{
+                    "isDistribution":"1"
+                }
             }
         },
         computed: {

@@ -112,9 +112,9 @@
                         this.$router.push({path:this.flag,query:{source:'select'}});
                     }
                 } else  if (type == "Email") {
-                    this.$router.push( {path:'/alps/product_email_list/'+ item.application_id })
+                    this.$router.push( {path:'/alps/product_email_list/'+ item.group_type })
                 } else if (type == "Download") {
-                    this.$router.push( {path:'/alps/product_download_list/'+ item.application_id })
+                    this.$router.push( {path:'/alps/product_download_list/'+ item.group_type })
                 } else {
                     throw new Error("类型错误");
                 }

@@ -99,14 +99,14 @@
             }
         },
         computed: {
-            applicationId () {
+            groupType () {
                 // 我们很快就会看到 `params` 是什么
                 return this.$route.params.id
             },
         },
         created() {
             // 判断是否请求数据
-            if( this.applicationId) {
+            if( this.groupType) {
                 this._getEmailData();
             }
         },
@@ -121,7 +121,7 @@
                 let _param = {
                     pageNo: this.pageNo - 1,
                     pageSize: this.pageSize,
-                    applicationId: this.applicationId,
+                    groupType: this.groupType,
                 };
 
                 const res = await getEmailList(_param);
