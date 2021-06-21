@@ -31,12 +31,12 @@ if (process.env.NODE_ENV == 'development') {
 
 	} else if(process.env.env_config == 'prod') {
 
-        baseUrl = 'http://mdp.yeego.com';
-        baseImgPath = 'http://mdp.yeego.com';
+        baseUrl = 'https://mdp.yeego.com';
+        baseImgPath = 'https://mdp.yeego.com';
 	}
 } else {
-    baseUrl = 'http://mdp.yeego.com';
-    baseImgPath = 'http://mdp.yeego.com';
+    baseUrl = 'https://mdp.yeego.com';
+    baseImgPath = 'https://mdp.yeego.com';
 }
 // let _orgin = location.origin;
 

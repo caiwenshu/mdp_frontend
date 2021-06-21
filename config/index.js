@@ -34,7 +34,8 @@ module.exports = {
     context: [ //代理路径 -- 只要是发出的是有以下请求的 都会被先转到代理服务器(webpack-dev-server) 然后由 webpack 服务器去请求  ** webpack-dev-server  起的本地服务 localhost
         // '/static',
         '/alps',
-        '/rv'
+        '/rv',
+        '/webpages',
     ],
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README

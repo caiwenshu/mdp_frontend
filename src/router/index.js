@@ -17,6 +17,8 @@ const ProductEmailList = r => require.ensure([], () => r(require('@/page/project
 
 const upload = r => require.ensure([], () => r(require('@/page/upload')),'upload');
 
+const WebPagesMain = r => require.ensure([], () => r(require('@/page/webpages/WebPagesMain')),'WebPages');
+const WebPagesList = r => require.ensure([], () => r(require('@/page/webpages/WebPagesList')),'WebPagesList');
 // const settings = r => require.ensure([], () => r(require('@/page/settings/Settings')),'settings');
 
 // meta子路由如果想要 可以跳转 则配置meta
@@ -42,6 +44,11 @@ const routes = [
                     { path: '/alps/product_email_list/:id', name: '邮件人员配置',component: ProductEmailList, meta:{menuShow: false, menuName: '产品邮件配置'}},
 
                     { path: '/alps/upload', component: upload, name: '文件上传', meta: {hidden:false,menuShow: true, menuName: '文件上传'}}
+                ]},
+
+            {path: '/webpages', redirect: '/webpages/main', component: WebPagesMain, name: 'WebPages', meta:{hidden:false, menuShow: true, menuName: 'WebPages'},
+                children:[
+                    {path:'/webpages/main', name:'列表',component: WebPagesList, meta:{menuShow: true, menuName: '列表'}},
                 ]},
             // {path: '/settings', component: settings, name: 'Settings', meta:{menuShow: true, menuName: 'Settings'}},
 
