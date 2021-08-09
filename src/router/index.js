@@ -16,6 +16,7 @@ const ProductDownloadList = r => require.ensure([], () => r(require('@/page/proj
 const ProductEmailList = r => require.ensure([], () => r(require('@/page/project/ProductEmailList')),'ProductEmailList');
 
 const upload = r => require.ensure([], () => r(require('@/page/upload')),'upload');
+const udid = r => require.ensure([], () => r(require('@/page/udid')),'udid');
 
 const WebPagesMain = r => require.ensure([], () => r(require('@/page/webpages/WebPagesMain')),'WebPages');
 const WebPagesList = r => require.ensure([], () => r(require('@/page/webpages/WebPagesList')),'WebPagesList');
@@ -43,7 +44,8 @@ const routes = [
                     { path: '/alps/product_download_list/:id', name: '下载页列表',component: ProductDownloadList, meta:{menuShow: false, menuName: '产品下载页配置'}},
                     { path: '/alps/product_email_list/:id', name: '邮件人员配置',component: ProductEmailList, meta:{menuShow: false, menuName: '产品邮件配置'}},
 
-                    { path: '/alps/upload', component: upload, name: '文件上传', meta: {hidden:false,menuShow: true, menuName: '文件上传'}}
+                    { path: '/alps/upload', component: upload, name: '文件上传', meta: {hidden:false,menuShow: true, menuName: '文件上传'}},
+                    { path: '/alps/ios_udid', component: udid, name: 'UDID获取', meta: {hidden:false,menuShow: true, menuName: 'UDID获取'}}
                 ]},
 
             {path: '/webpages', redirect: '/webpages/main', component: WebPagesMain, name: 'WebPages', meta:{hidden:false, menuShow: true, menuName: 'WebPages'},
