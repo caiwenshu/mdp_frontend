@@ -19,21 +19,10 @@
                     </el-form-item>
                     <el-form-item>
                         <el-button type="primary" @click="_handleFromCommit">确 定</el-button>
-                        <el-button type="primary" @click="_handleFromCommit">确 定</el-button>
                     </el-form-item>
                 </el-form>
             </el-col>
         </el-row>
-        <el-row :gutter="20" style='margin-top: 30px;'>
-            <el-col :span="8" :offset="1">
-                <el-alert
-                    :visible.sync="alertVisible"
-                    :title="alertMsg"
-                    type="info">
-                </el-alert>
-            </el-col>
-        </el-row>
-
     </div>
 </template>
 
@@ -45,8 +34,6 @@ export default {
     name: 'upload',
     data() {
         return {
-            alertVisible:false,
-            alertMsg:'',
             form: {
                 email: '',
                 type: 'toc',
@@ -81,9 +68,11 @@ export default {
 
             console.log('res--',res);
             if (res.code == '200') {
-                this.alertMsg = res.data
-                this.alertVisible = true
-                this.$message(res.message);
+                this.$message({
+                        message:res.message + '<br/><br/>重签日志:' + '<a target="_blank" href=' + res.data + '>' + res.data + '</a>',
+                        dangerouslyUseHTMLString:true,
+                        type:"info"
+                    });
             } else {
                 this.$message("触发失败,请联系开发人员进行查看");
             }
