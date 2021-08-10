@@ -93,5 +93,10 @@ export const adminSaveSettings = (data) => fetch({url:'/alps/admin_save_settings
 export const adminGetSettings = (data) => fetch({url:'/alps/admin_get_settings',data,type:'POST',contentType:'formData'});
 
 
+/**
+ * 重签IPA
+ * @param data
+ */
+export const resignIPA = (data) => fetch({url:'/alps/admin_resign_ipa',data,type:'POST',contentType:'formData'});
 
 

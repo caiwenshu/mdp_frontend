@@ -17,6 +17,7 @@ const ProductEmailList = r => require.ensure([], () => r(require('@/page/project
 
 const upload = r => require.ensure([], () => r(require('@/page/upload')),'upload');
 const udid = r => require.ensure([], () => r(require('@/page/udid')),'udid');
+const resign = r => require.ensure([], () => r(require('@/page/resign')),'resign');
 
 const WebPagesMain = r => require.ensure([], () => r(require('@/page/webpages/WebPagesMain')),'WebPages');
 const WebPagesList = r => require.ensure([], () => r(require('@/page/webpages/WebPagesList')),'WebPagesList');
@@ -45,7 +46,9 @@ const routes = [
                     { path: '/alps/product_email_list/:id', name: '邮件人员配置',component: ProductEmailList, meta:{menuShow: false, menuName: '产品邮件配置'}},
 
                     { path: '/alps/upload', component: upload, name: '文件上传', meta: {hidden:false,menuShow: true, menuName: '文件上传'}},
-                    { path: '/alps/ios_udid', component: udid, name: 'UDID获取', meta: {hidden:false,menuShow: true, menuName: 'UDID获取'}}
+                    { path: '/alps/ios_udid', component: udid, name: 'UDID获取', meta: {hidden:false,menuShow: true, menuName: 'UDID获取'}},
+                    { path: '/alps/ios_resign', component: resign, name: 'IPA重签', meta: {hidden:false,menuShow: true, menuName: 'IPA重签'}}
+
                 ]},
 
             {path: '/webpages', redirect: '/webpages/main', component: WebPagesMain, name: 'WebPages', meta:{hidden:false, menuShow: true, menuName: 'WebPages'},
